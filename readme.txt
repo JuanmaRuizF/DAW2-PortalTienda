@@ -1,4 +1,4 @@
-=== Wisdom Blog ===
+=== Wisdom Travel ===
 
 Contributors:       codevibrant
 Requires at least:  4.7
@@ -10,7 +10,7 @@ Tags: 				blog, portfolio, one-column, two-columns, left-sidebar, right-sidebar,
 
 == Description ==
 
-Introducing Wisdom Blog, the latest Clean & Personal Blog Theme from CodeVibrant! Fully responsive design displays beautifully across desktop, mobile, and all devices. Easy installation allows you to start post blogs immediately after the activation. Theme supported Customizer which allows you to customize and change the design of your blog. Perfect choice for your personal blog, corporate blog, marketing blog, authority blog or any type of creative blog.
+Wisdom Travel is the child theme of Wisdom Blog which is Clean & Personal Blog Theme from CodeVibrant! Fully responsive design displays beautifully across desktop, mobile and all devices. Easy installation allows you to start post blogs immediately after the activation. Theme supported Customizer which allows you to customize and change design of your blog. Perfect choice for your personal blog, corporate blog, marketing blog, authority blog or any type of creative blog.
 
 == Installation ==
 
@@ -20,83 +20,24 @@ Introducing Wisdom Blog, the latest Clean & Personal Blog Theme from CodeVibrant
 
 == Copyright ==
 
-Wisdom Blog WordPress Theme, Copyright 2018 CodeVibrant.
-Wisdom Blog is distributed under the terms of the GNU GPLv3.
+Wisdom Travel WordPress Theme is child theme of Wisdom Blog, Copyright 2018 CodeVibrant.
+Wisdom Travel is distributed under the terms of the GNU GPLv3.
 
-Wisdom Blog bundles the following third-party resources:
-	
-	Font Awesome by Dave Gandy    
-    Licenses: SIL OFL 1.1, MIT, CC BY 3.0
-    Source: https://github.com/FortAwesome/Font-Awesome
-
-    Sticky js, Copyright 2014-2016, Anthony Garand
-    License: GPL
-    Source: https://github.com/garand/sticky
-
-    Animate Css Copyright 2016 Daniel Eden
-    License: MIT
-    Source: https://github.com/daneden/animate.css
-
-    WOW Copyright 2016 Matthieu Aussaguel
-    License: GPLv3
-    Source: https://github.com/matthieua/WOW
-
-    Theia Sticky Sidebar Copyright 2013-2016 WeCodePixels
-    License: MIT
-    Source: https://github.com/WeCodePixels/theia-sticky-sidebar
-
-    TGM-Plugin-Activation, Copyright (c) 2011, Thomas Griffin
-    License: GNU GPL, Version 2
-    Source: https://github.com/TGMPA/TGM-Plugin-Activation
+Wisdom Travel bundles the following third-party resources:
 
     Screenshot images
     Licenses: CC0 Public Domain
-	https://pxhere.com/en/photo/1393298
-	https://pxhere.com/en/photo/602946
-	https://pxhere.com/en/photo/1492519
+    https://pxhere.com/en/photo/1200073
+    https://pxhere.com/en/photo/666618
+    https://pxhere.com/en/photo/944430
+    https://pxhere.com/en/photo/1269446
+    https://pxhere.com/en/photo/1177410
 
 == Changelog ==
 
-= 1.0.9 =
-    * Added - requires tag at readme.txt file.
-    * Added - recommended plugin at tgm.
-    * Removed - unused tgm plugin.
-    * Fixed - author widget escaping function fixed.
-    * Updated - .pot file.
-    * Updated - new screenshot updated.
-    * Fixed - responsive mobile bug fixed.
-    * Updated - accessibility features updated.
-
-= 1.0.8 =
-    * Fixed - keyboard navigation with focus item.
-    * Fixed - jquery bugs at customizer panel.
-    * Fixed - escaping warning on template-tags file.
-    * Updated - .pot file.
-
-= 1.0.7 =
-    * Added action hook in the header file.
-
-= 1.0.6 =
-    * Added required function about post thumbnail in functions.php.
-    * Updated .pot file.
-
-= 1.0.5 =
-    * Added Theme Upsell link at customizer panel.
-    
-= 1.0.4 =
-    * Fixed several issues according to the reviewer.
-
-= 1.0.3 =
-    * Prefix removed from third-party scripts.
-    * Some design tweaks are done.
-
-= 1.0.2 =
-    * Fixed issue listed by theme reviewer.
-    
-= 1.0.1 
-    * Fixed default image size.
-    * Added TGM copyright link on readme.txt file.
-    * Removed unused code.
-
+= 1.0.1 =
+    * Changed - screenshot image url.
+    * Fixed - Some css bug fixed.
+    
 = 1.0.0 =
-    * Submit theme on wp.org trac.
+    * Submit theme on wp.org trac.

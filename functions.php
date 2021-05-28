@@ -1,15 +1,15 @@
 <?php
 /**
- * Wisdom functions and definitions
+ * Describe child theme functions
  *
- * @link https://developer.wordpress.org/themes/basics/theme-functions/
- *
- * @package CodeVibrant
- * @subpackage Wisdom Blog
- * @since 1.0.0
+ * @package Wisdom Blog
+ * @subpackage Wisdom Travel
+ * 
  */
 
-if ( ! function_exists( 'wisdom_blog_setup' ) ) :
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+if ( ! function_exists( 'wisdom_travel_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -17,151 +17,100 @@ if ( ! function_exists( 'wisdom_blog_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function wisdom_blog_setup() {
-		/*
-		 * Make theme available for translation.
-		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on Wisdom, use a find and replace
-		 * to change 'wisdom-blog' to the name of your theme in all the template files.
-		 */
-		load_theme_textdomain( 'wisdom-blog', get_template_directory() . '/languages' );
+	function wisdom_travel_setup() {
 
-		// Add default posts and comments RSS feed links to head.
-		add_theme_support( 'automatic-feed-links' );
+	    $wisdom_travel_theme_info = wp_get_theme();
+	    $GLOBALS['wisdom_travel_version'] = $wisdom_travel_theme_info->get( 'Version' );
+	}
+	endif;
 
-		/*
-		 * Let WordPress manage the document title.
-		 * By adding theme support, we declare that this theme does not use a
-		 * hard-coded <title> tag in the document head, and expect WordPress to
-		 * provide it for us.
-		 */
-		add_theme_support( 'title-tag' );
+add_action( 'after_setup_theme', 'wisdom_travel_setup' );
 
-		/*
-		 * Enable support for Post Thumbnails on posts and pages.
-		 *
-		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
-		 */
-		add_theme_support( 'post-thumbnails' );
+/*-------------------------------------------------------------------------------------------------------------------------------*/
 
-		// Set default post thumbnail. 16:9.
-		set_post_thumbnail_size( 768, 432, true );
+if ( ! function_exists( 'wisdom_travel_fonts_url' ) ) :
+	/**
+	 * Register Google fonts for News Vibrant Mag.
+	 *
+	 * @return string Google fonts URL for the theme.
+	 * @since 1.0.0
+	 */
+    function wisdom_travel_fonts_url() {
 
-		// This theme uses wp_nav_menu() in one location.
-		register_nav_menus( array(
-			'wisdom_blog_primary_menu' => esc_html__( 'Primary Menu', 'wisdom-blog' ),
-			'wisdom_blog_footer_menu'  => esc_html__( 'Footer Menu', 'wisdom-blog' ),
-		) );
+        $fonts_url = '';
+        $font_families = array();
 
-		/*
-		 * Switch default core markup for search form, comment form, and comments
-		 * to output valid HTML5.
-		 */
-		add_theme_support( 'html5', array(
-			'search-form',
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption',
-		) );
+        /*
+         * Translators: If there are characters in your language that are not supported
+         * by Lora, translate this to 'off'. Do not translate into your own language.
+         */
+        if ( 'off' !== _x( 'on', 'Lora font: on or off', 'wisdom-travel' ) ) {
+            $font_families[] = 'Lora:400,700';
+        }
 
-		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'wisdom_blog_custom_background_args', array(
-			'default-color' => 'ffffff',
-			'default-image' => '',
-		) ) );
+        if( $font_families ) {
+            $query_args = array(
+                'family' => urlencode( implode( '|', $font_families ) ),
+                'subset' => urlencode( 'latin,latin-ext' ),
+            );
 
-		// Add theme support for selective refresh for widgets.
-		add_theme_support( 'customize-selective-refresh-widgets' );
+            $fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+        }
 
+        return $fonts_url;
+    }
+endif;
 
-		// add post-formats to default post type 'posts'
-		add_theme_support( 'post-formats', array( 'aside', 'gallery', 'video', 'audio', 'quote' ) );
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+	
+if( ! function_exists( 'wisdom_travel_customize_register' ) ) :
+	/**
+	 * Managed the theme default color
+	 */
+	function wisdom_travel_customize_register( $wp_customize ) {
+		
+		global $wp_customize;
 
-		/**
-		 * Add support for core custom logo.
-		 *
-		 * @link https://codex.wordpress.org/Theme_Logo
-		 */
-		add_theme_support( 'custom-logo', array(
-			'height'      => 50,
-			'width'       => 400,
-			'flex-width'  => true,
-			'flex-height' => true,
-		) );
+		$wp_customize->get_setting( 'wisdom_blog_theme_color' )->default = '#00bcd4';
+
 	}
 endif;
-add_action( 'after_setup_theme', 'wisdom_blog_setup' );
 
+add_action( 'customize_register', 'wisdom_travel_customize_register', 20 );
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
 /**
- * Set the content width in pixels, based on the theme's design and stylesheet.
- *
- * Priority 0 to make it available to lower priority callbacks.
- *
- * @global int $content_width
+ * Enqueue child theme styles and scripts
  */
-function wisdom_blog_content_width() {
-	// This variable is intended to be overruled from themes.
-	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
-	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
-	$GLOBALS['content_width'] = apply_filters( 'wisdom_blog_content_width', 640 );
+add_action( 'wp_enqueue_scripts', 'wisdom_travel_scripts', 20 );
+
+function wisdom_travel_scripts() {
+    
+    global $wisdom_travel_version;
+    
+    wp_enqueue_style( 'wisdom-travel-google-font', wisdom_travel_fonts_url(), array(), null );
+    
+    wp_dequeue_style( 'wisdom-blog-style' );
+    wp_dequeue_style( 'wisdom-blog-responsive-style' );
+    
+	wp_enqueue_style( 'wisdom-blog-parent-style', get_template_directory_uri() . '/style.css', array(), esc_attr( $wisdom_travel_version ) );
+    
+    wp_enqueue_style( 'wisdom-blog-parent-responsive', get_template_directory_uri() . '/assets/css/cv-responsive.css', array(), esc_attr( $wisdom_travel_version ) );
+    
+    wp_enqueue_style( 'wisdom-travel', get_stylesheet_uri(), array(), esc_attr( $wisdom_travel_version ) );
+    
+    $wisdom_travel_theme_color = esc_attr( get_theme_mod( 'wisdom_blog_theme_color', '#00bcd4' ) );
+    
+    $output_css = '';
+    
+    $output_css .= ".edit-link .post-edit-link,.reply .comment-reply-link,.widget_search .search-submit,.widget_search .search-submit,article.sticky:before,.widget_search .search-submit:hover{ background: ". esc_attr( $wisdom_travel_theme_color ) ."}\n";
+    
+    $output_css .= "a,a:hover,a:focus,a:active,.entry-footer a:hover,.comment-author .fn .url:hover,.commentmetadata .comment-edit-link,#cancel-comment-reply-link,#cancel-comment-reply-link:before,.logged-in-as a,.widget a:hover,.widget a:hover::before,.widget li:hover::before,.banner-btn a:hover,.entry-title a:hover,.entry-title a:hover,.cat-links a:hover,.wisdom_blog_latest_posts .cv-post-title a:hover{ color: ". esc_attr( $wisdom_travel_theme_color ) ."}\n";
+
+    $output_css .= "widget_search .search-submit,.widget_search .search-submit:hover { border-color: ". esc_attr( $wisdom_travel_theme_color ) ."}\n";
+
+    $refine_output_css = wisdom_blog_css_strip_whitespace( $output_css );
+
+    wp_add_inline_style( 'wisdom-travel', $refine_output_css );
+    
 }
-add_action( 'after_setup_theme', 'wisdom_blog_content_width', 0 );
-
-/**
- * Set the theme version, based on theme stylesheet.
- *
- * @global string $wisdom_blog_theme_version
- */
-function wisdom_blog_theme_info() {
-	$wisdom_blog_theme_info = wp_get_theme();
-	$GLOBALS['wisdom_blog_theme_version'] = $wisdom_blog_theme_info->get( 'Version' );
-}
-add_action( 'after_setup_theme', 'wisdom_blog_theme_info', 0 );
-
-/**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
-
-/**
- * Custom template tags for this theme.
- */
-require get_template_directory() . '/inc/template-tags.php';
-
-/**
- * Functions which enhance the theme by hooking into WordPress.
- */
-require get_template_directory() . '/inc/template-functions.php';
-
-/**
- * Customizer additions.
- */
-require get_template_directory() . '/inc/customizer/cv-customizer.php';
-
-/**
- * hooks
- */
-require get_template_directory() . '/inc/cv-custom-hooks.php';
-
-/**
- * Custom function for widgets
- */
-require get_template_directory() . '/inc/widgets/cv-widget-functions.php';
-
-/**
- * Custom function for widgets
- */
-require get_template_directory() . '/inc/cv-post-sidebar-meta.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-if ( defined( 'JETPACK__VERSION' ) ) {
-	require get_template_directory() . '/inc/jetpack.php';
-}
-
-/**
- * Load TGM
- */
-require get_template_directory() . '/inc/tgm/cv-recommended-plugins.php';
