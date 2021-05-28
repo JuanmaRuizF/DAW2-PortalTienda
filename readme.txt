@@ -1,33 +1,31 @@
-=== Ashe ===
+=== Chic Lite ===
 
-Author: Royal-Flush wp-royal.com
-Requires at least: WordPress 4.7+
-Tested up to: WordPress 5.7.2
-Version: 1.9.9.5.9
-License: GPLv3 or later
-License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
-Tags: blog, e-commerce, food-and-drink, one-column, two-columns, three-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, custom-logo, featured-images, footer-widgets, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
-
+Contributors: raratheme
+Requires at least: 4.7
+Requires PHP: 5.6
+Tested up to: 5.7
+Stable tag: 1.0.3
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Tags: blog, one-column, two-columns, right-sidebar, left-sidebar, footer-widgets, custom-background, custom-header, custom-menu, custom-logo, featured-images, threaded-comments, full-width-template, rtl-language-support, translation-ready, theme-options, e-commerce
 
 == Description ==
+Chic Lite is a feature-rich feminine blog theme for professional bloggers. The theme is mobile friendly, SEO optimized, Schema friendly, and loads faster to help you rank your website higher on search engines. If you want to share your expert fashion tips, travel expertise, your favorite food recipes, or create a lifestyle, beauty and makeup, coaching, or any other niche blog, Chic Lite is for you.  You can easily choose from unlimited colors and 900+ Google fonts to change your website look and feel with a single click. This theme comes with a gorgeous newsletter section that can help you generate more leads and Instagram section to flaunt your Instagram posts. Chic Lite is translation ready, WooCommerce and RTL compatible. Check demo at https://rarathemes.com/theme-demo/?theme=chic-lite, read the documentation at https://docs.rarathemes.com/docs/chic-lite/, and get support at https://rarathemes.com/support-ticket/.
 
-Personal and Multi-Author Free WordPress Blog Theme. Perfect for personal, lifestyle, health & fitness, food, cooking, bakery, travel, beauty, fashion, wedding, photography, news, quotes blog, auto blog, small business website and any other kind of amazing blogs. Minimal, elegant & mobile friendly layout with WooCommerce shop (storefront) support will WOW and inspire your visitors. Well documented and very easy to use even for WordPress beginners. Clean and Modern Responsive design will perfectly showcase your content on any device, even on tablet, mobile & retina displays. Very fast, compatibility with many popular plugins & of course translation & RTL (right to left language) ready, coded with best SEO practices. The theme has features like Text & Image logo, Fullscreen Slider, Header image, Instagram slider widget support, footer menu support, GDPR compatibility plugins support and many more. Works perfectly with all major drag and drop page builders like Elementor, Beaver Builder, Visual Composer, SiteOrigin, Divi. You just need to write and be awesome! TEMPLATE DEMO: https://wp-royal.com/themes/ashe-free/demo/
+== Installation ==
 
-
-== Theme Documentation ==
-
-Please read the Theme Documentation to understand the basics: Installation, Setup, etc...
-http://wp-royal.com/themes/ashe/docs/
-
+1. In your admin panel, go to Appearance > Themes and click the Add New button.
+2. Click Upload Theme and Choose File, then select the theme's .zip file. Click Install Now.
+3. Click Activate to use your new theme right away.
 
 == Copyright ==
 
-Ashe, Copyright 2017 wp-royal.com
-It is distributed under the terms of the GNU GPL
+Chic Lite WordPress Theme, Copyright 2021 rarathemes.com
+Chic Lite is distributed under the terms of the GNU GPL
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
+the Free Software Foundation, either version 2 of the License, or
 (at your option) any later version.
 
 This program is distributed in the hope that it will be useful,
@@ -35,100 +33,88 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
+Chic Lite bundles the following third-party resources:
 
-Ashe bundles the following third-party resources:
+Owl-carousel, Copyright 2013-2017 David Deutsch 
+License : MIT
+Source  : https://owlcarousel2.github.io/OwlCarousel2
 
-waitForImages, Copyright (c) 2011-2017 Alexander Dickson @alexdickson
-Licenses: MIT
-Source: https://github.com/alexanderdickson/waitForImages
+Owl Carousel v2 Accessibility Layer, Copyright 2016 Geoffrey Roberts
+License : MIT
+Source  : https://github.com/rtrvrtg/owlcarousel2-a11ylayer
 
-FitVids.js, Copyright 2013, Chris Coyier - http://css-tricks.com + Dave Rupert - http://daverupert.com
-Licenses: WTFPL
-Source: https://github.com/davatron5000/FitVids.js
+animate.css, Copyright (c) 2017 Daniel Eden
+License: MIT
+Source: https://github.com/daneden/animate.css
 
-Slick, Copyright (c) 2014 Ken Wheeler
-Licenses: MIT
-Source: https://github.com/kenwheeler/slick/
+normalize.css, Copyright 2012-2016 Nicolas Gallagher and Jonathan Neal
+License: MIT
+Source: https://necolas.github.io/normalize.css/
 
-perfect-scrollbar, Copyright (c) 2014 Hyeonje Jun
-Licenses: MIT
-Source: https://github.com/noraesae/perfect-scrollbar/releases
+Font Awesome icons, Copyright Dave Gandy
+Icons License: CC BY 4.0 
+Fonts License: SIL OFL 1.1
+Source: http://fontawesome.io/
 
-Sticky-kit, Leaf Corcoran 2015
-Licenses: WTFPL
-Source: http://leafo.net/sticky-kit/
+Selectize, Copyright � 2013�2016 Brian Reavis & Contributors
+License: Apache License, Version 2.0
+Source: https://github.com/selectize/selectize.js
 
-Image Credits (screenshot.png):
-License: https://pixabay.com/en/service/terms/#usage
+Sifter, Copyright � 2013�2015 Brian Reavis & Contributors
+License: Apache License, Version 2.0
+Source: https://github.com/brianreavis/sifter.js/
 
-Header Image, Copyright StockSnap
-https://pixabay.com/en/trees-plants-woods-fence-park-2561373/
+Microplugin, Copyright � 2013 Brian Reavis & Contributors
+License: Apache License, Version 2.0
+Source: https://github.com/brianreavis/microplugin.js
 
-First Post, Copyright rawpixel
-https://pxhere.com/en/photo/1389877
+TGMPA, Copyright (c) 2011, Thomas Griffin
+License: GPL-2.0+
+Source: http://tgmpluginactivation.com/
 
-About Me Widget, Copyright rawpixel
-https://pxhere.com/en/photo/1389875
+Perfect Scrollbar v1.3.0
+License: The MIT License (MIT)
+Source: https://github.com/utatti/perfect-scrollbar
 
-Starter Content Image Credits
-https://pxhere.com/en/photo/1173579
+Chic Lite Theme incorporates code from Kirki, Copyright (c) 2017 Aristeides Stathopoulos
+License: https://github.com/aristath/kirki/blob/develop/LICENSE
+Source: https://github.com/aristath/kirki
 
-https://pxhere.com/en/photo/316
+Some codes are taken from https://blog.josemcastaneda.com/2016/08/08/copy-paste-hurting-theme/
 
-https://pxhere.com/en/photo/671673
+Some codes are taken from Twenty Twenty theme - https://wordpress.org/themes/twentytwenty/
 
-https://pxhere.com/en/photo/1389875
+Image for theme screenshot image, Copyright Pxhere
+License 	: CC0 1.0 Universal (CC0 1.0)
+License URI	: https://pxhere.com/en/license,
+Source 		: https://pxhere.com/en/photo/83297
 
-https://pxhere.com/en/photo/1616368
+Image for theme screenshot image, Copyright Pxhere
+License 	: CC0 1.0 Universal (CC0 1.0)
+License URI	: https://pxhere.com/en/license,
+Source 		: https://pxhere.com/en/photo/874091
 
-https://pxhere.com/en/photo/1184024
+Image for theme screenshot image, Copyright Pxhere
+License 	: CC0 1.0 Universal (CC0 1.0)
+License URI	: https://pxhere.com/en/license,
+Source 		: https://pxhere.com/en/photo/716866
 
-https://pxhere.com/en/photo/1269378
+Image for theme screenshot image, Copyright Pxhere
+License 	: CC0 1.0 Universal (CC0 1.0)
+License URI	: https://pxhere.com/en/license,
+Source 		: https://pxhere.com/en/photo/590460
 
-https://pxhere.com/en/photo/56762
+== Changelog ==
+    1.0.3 - March 05, 2021
+    	* Fixed sidebar layout in customizer
 
-https://pxhere.com/en/photo/826911
+    1.0.2 - April 22, 2021
+		* Fixed posts pagination translation issue
+		* Fixed header search js issue
+		* Recommended Rara One Click Demo Import plugin
 
-https://pxhere.com/en/photo/1373793
+    1.0.1 - April 15, 2021
+        * Fixed issues from org reviewer
 
-https://pxhere.com/en/photo/36534
-
-https://pxhere.com/en/photo/1485883
-
-https://pxhere.com/en/photo/1268051
-
-https://stocksnap.io/photo/trees-landscape-LRCLSUE3EV
-
-https://pxhere.com/en/photo/1327746
-
-https://www.youtube.com/watch?v=huqJUghX26Y
-
-https://stocksnap.io/photo/people-woman-1XSBGU6WE1
-
-https://stocksnap.io/photo/white-wall-U2CLPC1BKA
-
-https://pxhere.com/en/photo/596255
-
-https://pxhere.com/en/photo/1170347
-
-https://pxhere.com/en/photo/899944
-
-https://pxhere.com/en/photo/1364606
-
-https://pxhere.com/en/photo/780150
-
-https://pxhere.com/en/photo/123809
-
-https://pxhere.com/en/photo/1364606
-
-https://pxhere.com/en/photo/860480
-
-https://pxhere.com/en/photo/118569
-
-https://pxhere.com/en/photo/948941
-
-https://pxhere.com/en/photo/807724
-
-https://pxhere.com/en/photo/101222
-
-https://pxhere.com/en/photo/1604510
+    1.0.0 - January 19, 2021
+        * Initial release

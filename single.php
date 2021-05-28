@@ -1,52 +1,38 @@
-<?php get_header(); ?>
+<?php
+/**
+ * The template for displaying all single posts
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
+ *
+ * @package Chic_Lite
+ */
 
-<!-- Page Content -->
-<div class="main-content clear-fix<?php echo ( ashe_options( 'general_single_width' ) === 'boxed'  ) ? ' boxed-wrapper': ''; ?>" data-sidebar-sticky="<?php echo esc_attr( ashe_options( 'general_sidebar_sticky' )  ); ?>">
+get_header(); ?>
+    <div id="primary" class="content-area">	
+    	<main id="main" class="site-main">
 
+    	<?php
+    	while ( have_posts() ) : the_post();
 
-	<?php
+    		get_template_part( 'template-parts/content', 'single' );
 
-	// Sidebar Alt 
-	get_template_part( 'templates/sidebars/sidebar', 'alt' ); 
+    	endwhile; // End of the loop.
+    	?>
 
-	// Sidebar Left
-	get_template_part( 'templates/sidebars/sidebar', 'left' );
+    	</main><!-- #main -->
+        
+        <?php
+        /**
+         * @hooked chic_lite_author               - 15
+         * @hooked chic_lite_navigation           - 20 
+         * @hooked chic_lite_newsletter           - 30
+         * @hooked chic_lite_related_posts        - 35
+         * @hooked chic_lite_comment              - 15/45
+        */
+        do_action( 'chic_lite_after_post_content' );
+        ?>
+    </div><!-- #primary -->
 
-	?>
-
-	<!-- Main Container -->
-	<div class="main-container">
-
-		<?php
-
-		// Single Post
-		get_template_part( 'templates/single/post', 'content' );
-
-		// Author Description
-		if ( ashe_options( 'single_page_show_author_desc' ) === true ) {
-			get_template_part( 'templates/single/author', 'description' );
-		}
-
-		// Single Navigation
-		get_template_part( 'templates/single/single', 'navigation' );
-	
-		// Related Posts
-		ashe_related_posts( esc_html__( 'You May Also Like','ashe' ), ashe_options( 'single_page_related_orderby' ) );
-
-		// Comments
-		get_template_part( 'templates/single/comments', 'area' );
-
-		?>
-
-	</div><!-- .main-container -->
-
-
-	<?php // Sidebar Right
-
-	get_template_part( 'templates/sidebars/sidebar', 'right' );
-
-	?>
-
-</div><!-- .page-content -->
-
-<?php get_footer(); ?>
+<?php
+get_sidebar();
+get_footer();

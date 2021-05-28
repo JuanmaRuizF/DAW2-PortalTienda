@@ -1,46 +1,55 @@
-<?php 
+<?php
+/**
+ * The main template file
+ *
+ * This is the most generic template file in a WordPress theme
+ * and one of the two required files for a theme (the other being style.css).
+ * It is used to display a page when nothing more specific matches a query.
+ * E.g., it puts together the home page when no home.php file exists.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package Chic_Lite
+ */
 
-get_header();
+get_header(); ?>
+<div id="primary" class="content-area">        
+    <main id="main" class="site-main">
 
-if ( is_home() ) {
-
-	// Featured Slider, Carousel
-	if ( ashe_options( 'featured_slider_label' ) === true && ashe_options( 'featured_slider_location' ) !== 'front' ) {
-		if ( ashe_options( 'featured_slider_source' ) === 'posts' ) {
-			get_template_part( 'templates/header/featured', 'slider' );
-		} else {
-			get_template_part( 'templates/header/featured', 'slider-custom' );
-		}
-	}
-
-	// Featured Links, Banners
-	if ( ashe_options( 'featured_links_label' ) === true && ashe_options( 'featured_links_location' ) !== 'front' ) {
-		get_template_part( 'templates/header/featured', 'links' ); 
-	}
-
-}
-
-?>
-
-<div class="main-content clear-fix<?php echo esc_attr(ashe_options( 'general_content_width' )) === 'boxed' ? ' boxed-wrapper': ''; ?>" data-layout="<?php echo esc_attr( ashe_options( 'general_home_layout' ) ); ?>" data-sidebar-sticky="<?php echo esc_attr( ashe_options( 'general_sidebar_sticky' ) ); ?>">
-	
 	<?php
-	
-	// Sidebar Left
-	get_template_part( 'templates/sidebars/sidebar', 'left' ); 
+	if ( have_posts() ) :
 
-	// Blog Feed Wrapper
-	if ( strpos( ashe_options( 'general_home_layout' ), 'list' ) === 0 ) {
-		get_template_part( 'templates/grid/blog', 'list' );
-	} else {
-		get_template_part( 'templates/grid/blog', 'grid' );
-	}
+		/* Start the Loop */
+		while ( have_posts() ) : the_post();
 
-	// Sidebar Right
-	get_template_part( 'templates/sidebars/sidebar', 'right' ); 
+			/*
+			 * Include the Post-Format-specific template for the content.
+			 * If you want to override this in a child theme, then include a file
+			 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+			 */
+			get_template_part( 'template-parts/content', get_post_format() );
 
-	?>
+		endwhile;
 
-</div>
+	else :
 
-<?php get_footer(); ?>
+		get_template_part( 'template-parts/content', 'none' );
+
+	endif; ?>
+
+	</main><!-- #main -->
+    
+    <?php
+    /**
+     * After Posts hook
+     * @hooked chic_lite_navigation - 15
+    */
+    do_action( 'chic_lite_after_posts_content' );
+    
+    ?>
+    
+</div><!-- #primary -->
+
+<?php
+get_sidebar();
+get_footer();
