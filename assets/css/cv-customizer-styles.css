@@ -1,0 +1,322 @@
+/*! ========================================================================
+ * Bootstrap Toggle: bootstrap-toggle.css v2.2.0
+ * http://www.bootstraptoggle.com
+ * ========================================================================
+ * Copyright 2014 Min Hur, The New York Times Company
+ * Licensed under MIT
+ * ======================================================================== */
+.checkbox label .toggle,.checkbox-inline .toggle{margin-left:-20px;margin-right:5px}
+.toggle{position:relative;overflow:hidden}
+.toggle input[type=checkbox]{display:none}
+.toggle-group{position:absolute;width:200%;top:0;bottom:0;left:0;transition:left 0.3s;-webkit-transition:left 0.3s;-moz-user-select:none;-webkit-user-select:none}
+.toggle.off .toggle-group{left:-100%}
+.toggle-on{position:absolute;top:0;bottom:0;left:0;right:50%;margin:0;border:0;border-radius:0}
+.toggle-off{position:absolute;top:0;bottom:0;left:50%;right:0;margin:0;border:0;border-radius:0}
+.toggle-handle{position:relative;margin:0 auto;padding-top:0;padding-bottom:0;height:100%;width:0;border-width:0 1px}
+.toggle.btn{min-width:59px;min-height:34px}
+.toggle-on.btn{padding-right:24px}
+.toggle-off.btn {
+	padding-left: 40px;
+}
+.toggle.btn-lg{min-width:79px;min-height:45px}
+.toggle-on.btn-lg{padding-right:31px}
+.toggle-off.btn-lg{padding-left:31px}
+.toggle-handle.btn-lg{width:40px}
+.toggle.btn-sm{min-width:50px;min-height:30px}
+.toggle-on.btn-sm{padding-right:20px}
+.toggle-off.btn-sm{padding-left:20px}
+.toggle.btn-xs{min-width:35px;min-height:22px}
+.toggle-on.btn-xs{padding-right:12px}
+.toggle-off.btn-xs{padding-left:12px}
+
+.toggle-group .btn.btn-primary {
+	background: #008EC2;
+	color: #fff;
+	border-radius: 0;
+	line-height: 24px;
+}
+
+.toggle-group .btn-default.toggle-off {
+	background: #EEEEEE;
+	color: #999999;
+	font-weight: 700;
+	line-height: 24px;
+	border-radius: 0;
+}
+
+.btn-default {
+	color: #333;
+	background-color: #fff;
+	border-color: #ccc;
+}
+
+.btn-lg, .btn-group-lg > .btn {
+	padding: 10px 16px;
+	font-size: 18px;
+	line-height: 1.33;
+	border-radius: 6px;
+}
+
+.btn {
+	display: inline-block;
+	padding: 0px 22px 0 0px;
+	margin-bottom: 0;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 26px;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 25px;
+}
+
+.toggle-handle {
+	position: relative;
+	margin: 0 auto;
+	padding-top: 0;
+	padding-bottom: 0;
+	height: 18px;
+	width: 18px;
+	border-width: 0 1px;
+	right: 14px;
+	padding: 0 !important;
+	border-radius: 100%;
+	top: -2px;
+	border: 2px solid #ccc;
+}
+
+.toggle.off .toggle-handle {
+	right: -17px;
+}
+.toggle.btn {
+	min-width: 59px;
+	min-height: 24px;
+	border-color: #ccc;
+}
+
+/*=================================================
+            Repeater field
+=================================================*/
+.cv-clearfix:after,
+.cv-clearfix:before{
+    content: "";
+    display: table;
+}
+
+.cv-clearfix:after{
+    clear: both;
+}
+
+.cv-repeater-field-control{
+    background: #FFF;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.cv-repeater-footer{
+    margin-top: 15px;
+    text-align: right;
+}
+
+.cv-repeater-field-control:first-child .cv-repeater-footer{
+    display: none;
+}
+
+.cv-repeater-field-title{
+    padding: 13px 15px;
+    line-height: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: 0;
+    font-size: 1em;
+    border: 1px solid #e5e5e5;
+    cursor: move;
+    position: relative;
+    border-bottom: 0;
+}
+
+.cv-repeater-field-title:after {
+    content: "\f142";
+    font: 400 20px/1 dashicons;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 1px 2px 1px 0;
+    margin-top: 10px;
+    margin-right: 10px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.cv-repeater-field-control.expanded .cv-repeater-field-title:after{
+    content: "\f140";
+}
+
+.cv-repeater-fields{
+    padding: 0 10px 10px;
+    border-top: none;
+    line-height: 16px;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+    display: none;
+}
+
+.cv-repeater-fields .customize-control-title{
+    margin-top: 10px;
+}
+
+.cv-repeater-field-control.expanded .cv-repeater-fields{
+    display: block;
+}
+
+.cv-reapeater-add-control-field {
+    float: right;
+}
+
+.cv-reapeater-add-add-control-field:before {
+    content: "\f132";
+    display: inline-block;
+    position: relative;
+    left: -2px;
+    top: -1px;
+    font: 400 18px/1 dashicons;
+    vertical-align: middle;
+}
+
+.cv-repeater-type-icon{
+    overflow: hidden;
+}
+
+.cv-repeater-selected-icon{
+    background: #F6F6F6;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    border: 1px solid #EEE;
+    position: relative;
+    margin-right: 45px;
+    cursor: pointer;
+    font-size: 28px;
+}
+
+.cv-repeater-selected-icon span{
+    position: absolute;
+    background: #F6F6F6;
+    right: -45px;
+    top: -1px;
+    height: 45px;
+    width: 45px;
+    border: 1px solid #EEE;
+    font-size: 20px;
+}
+
+.cv-repeater-icon-list{
+    height: 215px;
+    overflow-y: scroll;
+    font-size: 18px;
+    border: 1px solid #EEE;
+    border-right: 0;
+    border-top: 0;
+    padding-bottom: 4%;
+    display: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.cv-repeater-icon-list li{
+    float: left;
+    margin: 4% 3% 0;
+    height: 40px;
+    width: 16%;
+    text-align: center;
+    line-height: 40px;
+    border: 1px solid #EEE;
+}
+
+.cv-repeater-icon-list li:hover{
+    background: #333;
+    border: 1px solid #333;
+    color: #FFF;
+}
+
+.cv-repeater-icon-list li.icon-active{
+    background: #0073aa;
+    border: 1px solid #0073aa;
+    color: #FFF;
+}
+
+.customize-control-cv-repeater .cv-limit-msg {
+    display:  none;
+}
+
+.customize-control-cv-repeater span.cv-limit-msg:nth-of-type(2) {
+    display: block;
+    background: #fff;
+    padding: 10px 15px;
+    margin: 10px 0 10px;
+    border-left: 3px solid #ffb900;
+}
+
+/*=================================================
+            Radio Image Control
+=================================================*/
+.customize-control-radio-image .ui-button {
+    margin:        0;
+    border-radius: 0;
+    border:        none;
+    background:    transparent;
+}
+
+.customize-control-radio-image .ui-button-text { padding: 0; }
+
+.customize-control-radio-image img {
+    box-sizing: border-box;
+    max-width:  100%;
+    height:     auto;
+    padding:    1px;
+    border:     4px solid transparent;
+}
+
+.customize-control-radio-image img:hover,
+.customize-control-radio-image img:focus {
+    border-color: #ddd;
+}
+
+.customize-control-radio-image .ui-state-active img {
+    border-color: #00a0d2;
+}
+
+/*=================================================
+             Pro theme link
+=================================================*/
+#customize-controls .control-section-upsell .accordion-section-title:hover,
+#customize-controls .control-section-upsell .accordion-section-title:focus {
+    background-color: #fff;
+}
+
+.control-section-upsell .accordion-section-title .button {
+    margin-top:  -4px;
+    font-weight: 700;
+    margin-left: 8px;
+    background-image: linear-gradient(to right,rgba(212,51,93, 1),rgba(255,86,39,1));
+    border: none;
+    color: #fff;
+}
+
+.control-section-upsell .accordion-section-title .button:hover {
+    border: none;
+    background-image: linear-gradient(to right,rgba(255,86,39,1),rgba(212,51,93, 1));
+    -webkit-box-shadow: 0px 2px 2px rgba(0,0,0,0.1);
+    text-decoration: none;
+}
