@@ -1,63 +1,33 @@
-=== Twenty Twenty-One ===
-Contributors: wordpressdotorg
-Requires at least: 5.3
-Tested up to: 5.7
-Requires PHP: 5.6
-Stable tag: 1.3
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+=== Ashe ===
+
+Author: Royal-Flush wp-royal.com
+Requires at least: WordPress 4.7+
+Tested up to: WordPress 5.7.2
+Version: 1.9.9.5.9
+License: GPLv3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
+Tags: blog, e-commerce, food-and-drink, one-column, two-columns, three-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, custom-logo, featured-images, footer-widgets, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+
 
 == Description ==
 
-Twenty Twenty-One is a blank canvas for your ideas and it makes the block editor your best brush.
+Personal and Multi-Author Free WordPress Blog Theme. Perfect for personal, lifestyle, health & fitness, food, cooking, bakery, travel, beauty, fashion, wedding, photography, news, quotes blog, auto blog, small business website and any other kind of amazing blogs. Minimal, elegant & mobile friendly layout with WooCommerce shop (storefront) support will WOW and inspire your visitors. Well documented and very easy to use even for WordPress beginners. Clean and Modern Responsive design will perfectly showcase your content on any device, even on tablet, mobile & retina displays. Very fast, compatibility with many popular plugins & of course translation & RTL (right to left language) ready, coded with best SEO practices. The theme has features like Text & Image logo, Fullscreen Slider, Header image, Instagram slider widget support, footer menu support, GDPR compatibility plugins support and many more. Works perfectly with all major drag and drop page builders like Elementor, Beaver Builder, Visual Composer, SiteOrigin, Divi. You just need to write and be awesome! TEMPLATE DEMO: https://wp-royal.com/themes/ashe-free/demo/
 
-With new block patterns, which allow you to create a beautiful layout in a matter of seconds, this theme’s soft colors and eye-catching — yet timeless — design will let your work shine.
 
-Take it for a spin! See how Twenty Twenty-One elevates your portfolio, business website, or personal blog.
+== Theme Documentation ==
 
-== Installation ==
+Please read the Theme Documentation to understand the basics: Installation, Setup, etc...
+http://wp-royal.com/themes/ashe/docs/
 
-1. In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
-2. Type in Twenty Twenty-One in the search form and press the 'Enter' key on your keyboard.
-3. Click on the 'Activate' button to use your new theme right away.
-4. Go to INSERT ABOUT PAGE for a guide on how to customize this theme.
-5. Navigate to Appearance > Customize in your admin panel and customize to your taste.
-
-== Privacy ==
-Twenty Twenty-One uses LocalStorage to save the setting when Dark Mode support is turned on or off.
-LocalStorage is necessary for the setting to work and is only used when a user clicks on the Dark Mode button.
-No data is saved in the database or transferred.
-
-== Changelog ==
-
-= 1.3 =
-* Released: April 14, 2021
-
-https://wordpress.org/support/article/twenty-twenty-one-changelog#Version_1.3
-
-= 1.2 =
-* Released: March 9, 2021
-
-https://wordpress.org/support/article/twenty-twenty-one-changelog#Version_1.2
-
-= 1.1 =
-* Released: December 22, 2020
-
-https://wordpress.org/support/article/twenty-twenty-one-changelog#Version_1.1
-
-= 1.0 =
-* Released: December 8, 2020
-
-https://wordpress.org/support/article/twenty-twenty-one-changelog#Version_1.0
 
 == Copyright ==
 
-Twenty Twenty-One WordPress Theme, 2020-2021 WordPress.org
-Twenty Twenty-One is distributed under the terms of the GNU GPL.
+Ashe, Copyright 2017 wp-royal.com
+It is distributed under the terms of the GNU GPL
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 2 of the License, or
+the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
 
 This program is distributed in the hope that it will be useful,
@@ -66,49 +36,99 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
 
-Twenty Twenty-One is derived from Seedlet, (C) 2020 Automattic, Inc.
+Ashe bundles the following third-party resources:
 
-Twenty Twenty-One is also based on:
+waitForImages, Copyright (c) 2011-2017 Alexander Dickson @alexdickson
+Licenses: MIT
+Source: https://github.com/alexanderdickson/waitForImages
 
-Twenty Nineteen. 2018-2021 WordPress.org
-Twenty Nineteen is distributed under the terms of the GNU GPL v2 or later.
+FitVids.js, Copyright 2013, Chris Coyier - http://css-tricks.com + Dave Rupert - http://daverupert.com
+Licenses: WTFPL
+Source: https://github.com/davatron5000/FitVids.js
 
-Twenty Seventeen. Copyright (C) 2016-2021 WordPress.org
-Twenty Seventeen is distributed under the terms of the GNU GPL v2 or later.
+Slick, Copyright (c) 2014 Ken Wheeler
+Licenses: MIT
+Source: https://github.com/kenwheeler/slick/
 
-Twenty Sixteen. Copyright (C) 2015-2021 WordPress.org
-Twenty Sixteen is distributed under the terms of the GNU GPL v2 or later.
+perfect-scrollbar, Copyright (c) 2014 Hyeonje Jun
+Licenses: MIT
+Source: https://github.com/noraesae/perfect-scrollbar/releases
 
-Twenty Twenty. Copyright (C) 2020-2021 WordPress.org
-Twenty Twenty is distributed under the terms of the GNU GPL v2 or later.
+Sticky-kit, Leaf Corcoran 2015
+Licenses: WTFPL
+Source: http://leafo.net/sticky-kit/
 
-Underscores https://underscores.me/, Copyright (C) 2012-2021 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
+Image Credits (screenshot.png):
+License: https://pixabay.com/en/service/terms/#usage
 
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+Header Image, Copyright StockSnap
+https://pixabay.com/en/trees-plants-woods-fence-park-2561373/
 
-Unless otherwise noted, the icons in this theme are derived from the WordPress
-Icons Library, licensed under the terms of the GNU GPL v2 or later.
-https://github.com/WordPress/gutenberg/tree/master/packages/icons
+First Post, Copyright rawpixel
+https://pxhere.com/en/photo/1389877
 
-This theme bundles the following third-party resources:
+About Me Widget, Copyright rawpixel
+https://pxhere.com/en/photo/1389875
 
-input[type='checkbox'], input[type='radio'], input[type='ranged'],
-https://css-tricks.com/custom-styling-form-inputs-with-modern-css-features/
-https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/
-https://codepen.io/aaroniker/pen/ZEYoxEY Copyright (c) 2020 Aaron Iker
-https://codepen.io/chriscoyier/pen/FtnAa Copyright (c) 2020 Chris Coyier
-License: MIT.
+Starter Content Image Credits
+https://pxhere.com/en/photo/1173579
 
-Images
-Art by Berthe Morisot 1841-1895. Public domain.
-https://www.wikiart.org/en/berthe-morisot/playing-in-the-sand
-https://www.wikiart.org/en/berthe-morisot/roses-tremieres-hollyhocks-1884
-https://www.wikiart.org/en/berthe-morisot/young-woman-in-mauve
-https://www.wikiart.org/en/berthe-morisot/in-the-bois-de-boulogne
-https://www.wikiart.org/en/berthe-morisot/daffodils
-https://www.wikiart.org/en/berthe-morisot/self-portrait-1885
-https://www.wikiart.org/en/berthe-morisot/the-garden-at-bougival-1884
-https://www.wikiart.org/en/berthe-morisot/villa-with-orange-trees-nice
-https://www.wikiart.org/en/berthe-morisot/reading
+https://pxhere.com/en/photo/316
+
+https://pxhere.com/en/photo/671673
+
+https://pxhere.com/en/photo/1389875
+
+https://pxhere.com/en/photo/1616368
+
+https://pxhere.com/en/photo/1184024
+
+https://pxhere.com/en/photo/1269378
+
+https://pxhere.com/en/photo/56762
+
+https://pxhere.com/en/photo/826911
+
+https://pxhere.com/en/photo/1373793
+
+https://pxhere.com/en/photo/36534
+
+https://pxhere.com/en/photo/1485883
+
+https://pxhere.com/en/photo/1268051
+
+https://stocksnap.io/photo/trees-landscape-LRCLSUE3EV
+
+https://pxhere.com/en/photo/1327746
+
+https://www.youtube.com/watch?v=huqJUghX26Y
+
+https://stocksnap.io/photo/people-woman-1XSBGU6WE1
+
+https://stocksnap.io/photo/white-wall-U2CLPC1BKA
+
+https://pxhere.com/en/photo/596255
+
+https://pxhere.com/en/photo/1170347
+
+https://pxhere.com/en/photo/899944
+
+https://pxhere.com/en/photo/1364606
+
+https://pxhere.com/en/photo/780150
+
+https://pxhere.com/en/photo/123809
+
+https://pxhere.com/en/photo/1364606
+
+https://pxhere.com/en/photo/860480
+
+https://pxhere.com/en/photo/118569
+
+https://pxhere.com/en/photo/948941
+
+https://pxhere.com/en/photo/807724
+
+https://pxhere.com/en/photo/101222
+
+https://pxhere.com/en/photo/1604510

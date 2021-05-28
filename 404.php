@@ -1,27 +1,13 @@
-<?php
-/**
- * The template for displaying 404 pages (not found)
- *
- * @link https://codex.wordpress.org/Creating_an_Error_404_Page
- *
- * @package WordPress
- * @subpackage Twenty_Twenty_One
- * @since Twenty Twenty-One 1.0
- */
+<?php get_header(); ?>
 
-get_header();
-?>
+	<div class="page-404">
+	
+		<h2><?php esc_html_e( 'Page not found!', 'ashe' ); ?></h2>
 
-	<header class="page-header alignwide">
-		<h1 class="page-title"><?php esc_html_e( 'Nothing here', 'twentytwentyone' ); ?></h1>
-	</header><!-- .page-header -->
+		<p>
+			<?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'ashe' ); ?>
+		</p>
 
-	<div class="error-404 not-found default-max-width">
-		<div class="page-content">
-			<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'twentytwentyone' ); ?></p>
-			<?php get_search_form(); ?>
-		</div><!-- .page-content -->
-	</div><!-- .error-404 -->
+	</div>
 
-<?php
-get_footer();
+<?php get_footer(); ?>

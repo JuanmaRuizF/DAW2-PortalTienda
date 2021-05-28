@@ -1,38 +1,46 @@
-<?php
-/**
- * The main template file
- *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package WordPress
- * @subpackage Twenty_Twenty_One
- * @since Twenty Twenty-One 1.0
- */
+<?php 
 
 get_header();
 
-if ( have_posts() ) {
+if ( is_home() ) {
 
-	// Load posts loop.
-	while ( have_posts() ) {
-		the_post();
-
-		get_template_part( 'template-parts/content/content', get_theme_mod( 'display_excerpt_or_full_post', 'excerpt' ) );
+	// Featured Slider, Carousel
+	if ( ashe_options( 'featured_slider_label' ) === true && ashe_options( 'featured_slider_location' ) !== 'front' ) {
+		if ( ashe_options( 'featured_slider_source' ) === 'posts' ) {
+			get_template_part( 'templates/header/featured', 'slider' );
+		} else {
+			get_template_part( 'templates/header/featured', 'slider-custom' );
+		}
 	}
 
-	// Previous/next page navigation.
-	twenty_twenty_one_the_posts_navigation();
-
-} else {
-
-	// If no content, include the "No posts found" template.
-	get_template_part( 'template-parts/content/content-none' );
+	// Featured Links, Banners
+	if ( ashe_options( 'featured_links_label' ) === true && ashe_options( 'featured_links_location' ) !== 'front' ) {
+		get_template_part( 'templates/header/featured', 'links' ); 
+	}
 
 }
 
-get_footer();
+?>
+
+<div class="main-content clear-fix<?php echo esc_attr(ashe_options( 'general_content_width' )) === 'boxed' ? ' boxed-wrapper': ''; ?>" data-layout="<?php echo esc_attr( ashe_options( 'general_home_layout' ) ); ?>" data-sidebar-sticky="<?php echo esc_attr( ashe_options( 'general_sidebar_sticky' ) ); ?>">
+	
+	<?php
+	
+	// Sidebar Left
+	get_template_part( 'templates/sidebars/sidebar', 'left' ); 
+
+	// Blog Feed Wrapper
+	if ( strpos( ashe_options( 'general_home_layout' ), 'list' ) === 0 ) {
+		get_template_part( 'templates/grid/blog', 'list' );
+	} else {
+		get_template_part( 'templates/grid/blog', 'grid' );
+	}
+
+	// Sidebar Right
+	get_template_part( 'templates/sidebars/sidebar', 'right' ); 
+
+	?>
+
+</div>
+
+<?php get_footer(); ?>

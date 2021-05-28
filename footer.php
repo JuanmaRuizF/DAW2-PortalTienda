@@ -1,72 +1,60 @@
-<?php
-/**
- * The template for displaying the footer
- *
- * Contains the closing of the #content div and all content after.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package WordPress
- * @subpackage Twenty_Twenty_One
- * @since Twenty Twenty-One 1.0
- */
+		</div><!-- .page-content -->
 
-?>
-			</main><!-- #main -->
-		</div><!-- #primary -->
-	</div><!-- #content -->
+		<!-- Page Footer -->
+		<footer id="page-footer" class="<?php echo esc_attr(ashe_options( 'general_footer_width' )) === 'boxed' ? 'boxed-wrapper ': ''; ?>clear-fix">
+			
+			<!-- Scroll Top Button -->
+			<?php if ( ashe_options( 'page_footer_show_scrolltop' ) === true ) : ?>
+			<span class="scrolltop">
+				<i class="fa fa fa-angle-up"></i>
+			</span>
+			<?php endif; ?>
 
-	<?php get_template_part( 'template-parts/footer/footer-widgets' ); ?>
+			<div class="page-footer-inner <?php echo ashe_options( 'general_footer_width' ) === 'contained' ? 'boxed-wrapper': ''; ?>">
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
+			<!-- Footer Widgets -->
+			<?php echo get_template_part( 'templates/sidebars/footer', 'widgets' ); ?>
 
-		<?php if ( has_nav_menu( 'footer' ) ) : ?>
-			<nav aria-label="<?php esc_attr_e( 'Secondary menu', 'twentytwentyone' ); ?>" class="footer-navigation">
-				<ul class="footer-navigation-wrapper">
-					<?php
-					wp_nav_menu(
-						array(
-							'theme_location' => 'footer',
-							'items_wrap'     => '%3$s',
-							'container'      => false,
-							'depth'          => 1,
-							'link_before'    => '<span>',
-							'link_after'     => '</span>',
-							'fallback_cb'    => false,
-						)
-					);
-					?>
-				</ul><!-- .footer-navigation-wrapper -->
-			</nav><!-- .footer-navigation -->
-		<?php endif; ?>
-		<div class="site-info">
-			<div class="site-name">
-				<?php if ( has_custom_logo() ) : ?>
-					<div class="site-logo"><?php the_custom_logo(); ?></div>
-				<?php else : ?>
-					<?php if ( get_bloginfo( 'name' ) && get_theme_mod( 'display_title_and_tagline', true ) ) : ?>
-						<?php if ( is_front_page() && ! is_paged() ) : ?>
-							<?php bloginfo( 'name' ); ?>
-						<?php else : ?>
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
-						<?php endif; ?>
-					<?php endif; ?>
-				<?php endif; ?>
-			</div><!-- .site-name -->
-			<div class="powered-by">
+			<div class="footer-copyright">
+				<div class="copyright-info">
 				<?php
-				printf(
-					/* translators: %s: WordPress. */
-					esc_html__( 'Proudly powered by %s.', 'twentytwentyone' ),
-					'<a href="' . esc_url( __( 'https://wordpress.org/', 'twentytwentyone' ) ) . '">WordPress</a>'
-				);
+
+				$copyright = ashe_options( 'page_footer_copyright' );
+				$copyright = str_replace( '$year', date_i18n( 'Y' ), $copyright );
+				$copyright = str_replace( '$copy', '&copy;', $copyright );
+
+				echo wp_kses_post( $copyright );
+
 				?>
-			</div><!-- .powered-by -->
+				</div>
 
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+				<?php 
+				wp_nav_menu( array(
+					'theme_location' 	=> 'footer',
+					'menu_id' 		 	=> 'footer-menu',
+					'menu_class' 		=> '',
+					'container' 	 	=> 'nav',
+					'container_class'	=> 'footer-menu-container',
+					'depth'				=> 1,
+					'fallback_cb' 		=> false
+				) );
+				?>
+				
+				<div class="credit">
+					<?php
+					$theme_data	= wp_get_theme();
+					/* translators: %1$s: theme name, %2$s link, %3$s theme author */
+					printf( __( '%1$s Theme by <a href="%2$s">%3$s.</a>', 'ashe' ), esc_html( $theme_data->Name ), esc_url( 'http://wp-royal.com/' ), $theme_data->Author );
+					?>
+				</div>
 
-</div><!-- #page -->
+			</div>
+
+			</div><!-- .boxed-wrapper -->
+
+		</footer><!-- #page-footer -->
+
+	</div><!-- #page-wrap -->
 
 <?php wp_footer(); ?>
 
